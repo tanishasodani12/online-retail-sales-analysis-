@@ -103,7 +103,7 @@ Due to GitHub file size limitations, the raw and cleaned datasets are not includ
 
 Dataset Source:  
 Online Retail Dataset – UCI Machine Learning Repository  
-https://archive.ics.uci.edu/ml/datasets/online+retail
+https://lnkd.in/digH8CnD
 
 ---
 
