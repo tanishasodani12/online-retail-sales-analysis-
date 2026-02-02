@@ -86,4 +86,32 @@ This project analyzes real-world e-commerce transaction data to identify top-sel
 ---
 
 ## 📂 Repository Structure
+online-retail-sales-analysis
+│
+├── README.md
+├── Online_Retail_Analytics.pbix
+├── retail_analysis.sql
+├── screenshots
+│ └── Online_Retail.png
+
+---
+
+## 📁 Dataset Information
+
+Due to GitHub file size limitations, the raw and cleaned datasets are not included in this repository.
+
+Dataset Source:  
+Online Retail Dataset – UCI Machine Learning Repository  
+https://archive.ics.uci.edu/ml/datasets/online+retail
+
+---
+
+## 👤 Author
+
+**Tanisha Sodani**  
+Aspiring Data Analyst  
+
+LinkedIn: https://www.linkedin.com/in/tanisha-sodani-1314a2250  
+GitHub: https://github.com/tanishasodani12
+
 
