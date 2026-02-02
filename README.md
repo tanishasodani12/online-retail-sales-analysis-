@@ -86,13 +86,14 @@ This project analyzes real-world e-commerce transaction data to identify top-sel
 ---
 
 ## 📂 Repository Structure
-online-retail-sales-analysis
+```online-retail-sales-analysis
 │
 ├── README.md
 ├── Online_Retail_Analytics.pbix
 ├── retail_analysis.sql
 ├── screenshots
 │ └── Online_Retail.png
+```
 
 ---
 
