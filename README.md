@@ -102,7 +102,7 @@ This project analyzes real-world e-commerce transaction data to identify top-sel
 Due to GitHub file size limitations, the raw and cleaned datasets are not included in this repository.
 
 Dataset Source:  
-Online Retail Dataset – UCI Machine Learning Repository  
+Online Retail Dataset (Kaggle)
 https://lnkd.in/digH8CnD
 
 ---
