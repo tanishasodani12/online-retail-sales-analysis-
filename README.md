@@ -1,118 +1,72 @@
-# 📊 Online Retail Sales Performance Analysis
+# Online Retail Sales Analysis
 
-## 🔍 Project Overview
-This project analyzes real-world e-commerce transaction data to identify top-selling products, revenue drivers, and customer purchase behavior patterns. The goal is to extract actionable business insights using Excel, SQL, and Power BI.
-
-- Dataset Size: 540,000+ transactions  
-- Final Analysis Scope: UK-based transactions  
-- Tools Used: Excel, SQL (MySQL), Power BI  
+End-to-end analysis of 537,752 retail transactions from a UK-based 
+online gift store — identifying revenue trends, product performance, 
+customer behaviour, and time-based sales patterns using SQL, Excel, 
+and Power BI.
 
 ---
 
-## 🎯 Business Questions Answered
+## Business Problem
 
-- Which products generate the highest revenue?
-- Which products sell the most by quantity?
-- What time of day do customers shop most?
-- Which day of the week has the highest sales?
-
----
-
-## 🛠 Tools & Technologies
-
-- **Excel** – Data cleaning, filtering, calculated columns  
-- **SQL (MySQL)** – Aggregations, grouping, revenue analysis, time-based insights  
-- **Power BI** – KPI dashboards and business reporting  
+A UK-based online retailer had 537K+ transaction records but no 
+structured view of which products were most profitable, who their 
+most valuable customers were, or when demand peaked. This analysis 
+answers 5 key business questions to support inventory, marketing, 
+and retention decisions.
 
 ---
 
-## 🧹 Data Cleaning & Preparation
+## Tools Used
 
-- Filtered dataset to focus on **United Kingdom** transactions  
-- Removed cancelled orders (Invoice numbers starting with "C")  
-- Created calculated column:  
-  `TotalSales = Quantity × UnitPrice`  
-- Identified mixed datetime formatting issues and handled time-based analysis during SQL processing  
-
----
-
-## 📈 Key Insights
-
-### 🔹 Highest Revenue Product
-- **DOTCOM POSTAGE**  
-- Revenue: **£206,248**
-
-### 🔹 Bestselling Product (Quantity)
-- **PAPER CRAFT, LITTLE BIRDIE**  
-- Units Sold: **80,995**
-
-### 🔹 Peak Shopping Hour
-- **12 PM (Noon)**  
-- Revenue: **£1.2 Million**
-
-### 🔹 Best Performing Day
-- **Tuesday**  
-- Revenue: **£1.88 Million**
+| Tool | Purpose |
+|---|---|
+| Excel | Data cleaning and preparation |
+| MySQL | Data loading, transformation, and analysis |
+| Power BI | Interactive dashboard and visualisation |
 
 ---
 
-## 📊 Power BI Dashboard Features
+## Business Questions & Key Findings
 
-- Total Revenue KPI Card  
-- Total Orders KPI Card  
-- Top 10 Products by Revenue  
-- Top 10 Products by Quantity  
-- Product performance comparison view  
-
----
-
-## 💡 Business Recommendations
-
-- Schedule marketing campaigns between **10 AM – 12 PM** to capture peak shopping demand  
-- Prioritize inventory restocking on **Mondays** to prepare for Tuesday sales surge  
-- Focus promotions on high-revenue products such as **DOTCOM POSTAGE**  
-- Maintain stock availability for high-volume products  
+| # | Business Question | Key Finding |
+|---|---|---|
+| 1 | How has monthly revenue trended? | November 2011 peak at £2.92M — 3x February (£1.02M). Heavily seasonal — Christmas gifting demand. |
+| 2 | Which products drive most revenue? | REGENCY CAKESTAND 3 TIER top revenue product. All top 10 are occasion-driven gift/decorative items. |
+| 3 | Who are the highest-value customers? | CustomerID 14646 — highest lifetime spend. CustomerID 14911 — highest order frequency (244 orders). |
+| 4 | Which countries generate most revenue? | UK = 30x Netherlands. Netherlands has highest average order value (£6,031 vs EIRE £1,943). |
+| 5 | When do customers buy most? | Peak hours 10am–3pm, Tuesday and Thursday. Suggests B2B customer base ordering during business hours. |
 
 ---
 
-## 🚀 Skills Demonstrated
+## Recommendations
 
-- Large dataset handling (500K+ records)  
-- Data cleaning and transformation  
-- SQL aggregations and business reporting  
-- Dashboard design and KPI visualization  
-- Analytical thinking and business insight generation  
-
----
-
-## 📂 Repository Structure
-```online-retail-sales-analysis
-│
-├── README.md
-├── Online_Retail_Analytics.pbix
-├── retail_analysis.sql
-├── screenshots
-│ └── Online_Retail.png
-```
+- Restock inventory by September, launch campaigns in October for November peak
+- Review pricing on high-volume, low-revenue products
+- Build VIP retention programme for top 10 customers
+- Prioritise international expansion into Netherlands and Germany
+- Schedule email campaigns Tuesday and Thursday at 9am
 
 ---
 
-## 📁 Dataset Information
+## Dashboard
 
-Due to GitHub file size limitations, the raw and cleaned datasets are not included in this repository.
-
-Dataset Source:  
-Online Retail Dataset (Kaggle)
-https://lnkd.in/digH8CnD
+![Dashboard Page 1](dashboard_page1.png)
+![Dashboard Page 2](dashboard_page2.png)
 
 ---
 
-## 👤 Author
+## Data Cleaning Decisions
 
-**Tanisha Sodani**  
-Aspiring Data Analyst  
+- Removed internal warehouse entries (?lost, ?missing, ?damages)
+- Removed postage and fee StockCodes (POST, DOT, gift, M)
+- Retained rows with blank CustomerID where product description was valid
+- Filtered negative quantities and unit prices in analysis queries
+- Raw dataset: 541,910 rows → Clean dataset: 537,752 rows
 
-LinkedIn: https://www.linkedin.com/in/tanisha-sodani-1314a2250  
-GitHub: https://github.com/tanishasodani12
+---
 
+## SQL Queries
 
+See [analysis.sql](analysis.sql) for all 5 business queries with 
+comments explaining the business question each one answers.
